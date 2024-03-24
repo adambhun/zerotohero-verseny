@@ -1,0 +1,4 @@
+A Dijkstra-algoritmus forrása:
+https://dev.to/mxl/dijkstras-algorithm-in-python-algorithms-for-beginners-dkc
+
+Az útvonalban az első koordináta jelöli a vertikális pozíciót.

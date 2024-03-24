@@ -1,0 +1,17 @@
+Feladat 2 - Alkalmazás készítése
+A linkről letölthető állomány egy csv adatfájlt tartalmaz. Ezt kell majd felhasználni a feladat
+megoldásához. A map.csv fájlban egy város térképe szerepel. Az adattagokat tekintjük
+házaknak, a fájlban szereplő oszlopok és sorok meg az utcák. Átlósan közlekedni nem lehet.
+A feladat egy rendőrségi akció kialakítása lesz. Megszökött egy veszélyes bűnöző és ki
+tudja mikor csap le legközelebb. A jelenlegi tartózkodási helyét leszűkítették a városnak a
+fájlban található régiójára.
+1. A detektívek szerencséjére a bűnöző a szokás rabja. A rendőrségi profil alapján
+tudjuk hogy milyen házakat szeret rejtekhelynek használni. Piros, kétemeletes kertes
+házakban szeret bujkálni, ahol a kert körül magas kerítés van. Keresd meg ezeket a
+házakat és írasd ki konzolba a pontos helyüket (sor, oszlop).
+(4 pont)
+2. A detektíveknek meg kell találniuk a bűnözőt. Tervezd meg útvonalukat a
+rendőrségtől koordináta távolság alapján legközelebbi, az első feladatnak megfelelő
+ház címére (koordinátáira), a rendőrség a (0, 0) helyen található. Az út legyen
+minimális, ehhez segít a házak utolsó paramétere, mely egy egész szám és azt jelzi
+hogy szomszédos házból mennyi idő eljutni ide. (mekkora a költsége rálépni)

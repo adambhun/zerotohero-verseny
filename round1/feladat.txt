@@ -1,0 +1,42 @@
+Feladat 2 - Alkalmazás készítése
+A linkről letölthető állomány két csv adatfájlt tartalmaz. Ezeket kell majd használni a
+feladatok megoldásához. A clients.csv fájl az autószerelőhöz beérkezett autók adatait
+tartalmazzák. A central_data.csv fájl a rendőrségi adatbázis helyi másolata.
+A feladat egy autó műhely naplózó alkalmazásának elkészítése, mely a lent leírt feladatokat
+hajtja végre. A program egy szöveges fájlba is lementi az általa kalkulált információkat,
+melynek formátumára a feladatok felsorolása alatt látsz példát.
+1. A beérkezett autók egy része egyenetlen úttartásra panaszkodik. Ebben a tökéletes
+világban tetszőleges autó kerekeinek ideális nyomása 1.5 és 3 bar között kellene,
+hogy legyen. Feladat, hogy kiegyenlítsük az egy tengelyen lévő kerekek nyomását (a
+két kerék nyomásának vedd az átlagát), úgy, hogy ne menjünk a megengedett
+határértékek felé vagy alá. A végzett munkát logold a feladat alján mutatott példa
+alapján: minden beolvasott autóhoz tartozzon a kimeneti fájlban egy bejegyzés, ahol
+tételesen felsorolod mind a négy kerékhez, milyen guminyomás-változást kellett
+eszközölni (tehát ne a végleges értéket mentsük le, hanem a módosítás mértékét).
+(5 pont)
+2.
+Az elmúlt időben megszaporodtak az autólopások, ezért a rendőrség arra kéri az
+összes szervízt, hogy ellenőrizzék le az autót még mielőtt nekilátnának a
+javításának. Sajnos a központi nyilvántartást tároló adatbázis jelenleg nem elérhető
+karbantartás miatt - szerencsére viszont rendelkezésünkre áll egy lokális másolata
+szöveges fájl formájában.
+Keresd meg a beérkező autók rendszámát a központi adatbázis lokális másolatán,
+es amennyiben az autó lopott, ezt jelezd a logban az autó jogi státusza alatt a
+‘RIASZTÁS’ kulcsszóval. A központi nyilvántartás mérete miatt lassan lehet rajta
+keresni. Legfeljebb O( log(n)) időigényű keresést implementálj.
+(4
+pont)
+3. Előfordulhat az az eset is,, hogy nincs ugyan az autó még lopottnak jelentve, de
+valamelyik adata eltér a központban tárolt adatoktól, ezt a ‘GYANÚS’ kulcsszóval
+jelezd és írd mellé, hogy miben tér el a központitól.
+(4 pont)Példa log:
+RHX-219, Kovács Márk:
+Kerekek állapota:
+Bal első: +1.2 bar
+Jobb első: -1.0 bar
+Bal hátsó: Nem igényelt munkát
+Jobb hátsó: Nem igényelt munkát
+Autó jogi státusza:
+Gyanús
+Rossz autó márka
+Rossz sofőr

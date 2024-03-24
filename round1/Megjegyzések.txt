@@ -1,0 +1,17 @@
+A kód vizsgálatának megkönnyítése érdekében SZÁNDÉKOSAN kommentként meghagytam bizonyos sorokat.
+
+Adatbázisok:
+
+Mivel az adatbázisok (csv) nem frissülnek a karbantartás miatt, a gyorsabb keresés érdekében megtehetem, hogy keresési szempontból hatékonyabb és ismétlődésmentes adatbázisokat generálok belőlük. Persze ezek frissítése is megoldható lenne a struktúra megtartásával, de ez nem tartozik a leírt feladatok közé.
+A kódban használt adatbázisok alatt python szótárakat értek, amikben az ábécé egy betűje a kulcs, egy dataframe pedig az érték. A dataframe-eken belül a lopott autók kerültek a dataframe végére, mert azokból kevesebb van, tehát kisebb a valószínűsége annak, hogy a keresett autó lopott, tehát a legtöbb keresés ezáltal gyorsabb.
+Kreált adatbázisok:
+-merged: A "central_data" és "clients" összeolvasztásából, konfliktusokat ignorálva.
+-suspicious: Azokat a sorokat tartalmazza, amik a fenti adatbázisból kimaradtak. Tehát itt van az összes autó ami "Gyanús" jogi státuszt kapna.
+-central: Ha az autó adatai megtalálhatóak a "merged" adatbázisban, nem lehet gyanús, tehát nem lesz szükség a rendszámára keresni a "central_data"-ban ezért az ilyen autók adatait töröltem a "central_data"-ból nyert adatokból. (A kódban a trimmed central_data-ból kreálva.)
+
+Hibakezelés:
+
+-Csak "AAA-000" formátumú renszámokat fogad a program, és erre figyelmezet is.
+-Amennyiben egy autóhoz nem tartozik keréknyomás - nem található a "clients"-ben, - arra "Nem vásárló" üzenettel reagál a program.
+-Ha kiegyenlítés után sincsenek a határokon belül az értékek, a gumikat 2.25-re fújják.
+
